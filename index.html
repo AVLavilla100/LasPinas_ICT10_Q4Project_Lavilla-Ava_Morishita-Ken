@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 10 Classmates</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body {
+            background-image: url(background2.png);
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm" style="background-color: rgb(59, 150, 255);">
+        <div class="container-fluid">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" style="color: white;">G10 Students</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="page2.html" style="color: white;">G10 Attendance</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="page3.html" style="color: white;">G10 Highlights</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="text-align: center; margin-top: 30px; color: rgb(26, 26, 26);">G10 Student List</h1>
+        <p style="text-align: center; color: rgb(26, 26, 26);"><strong>Add students or view existing ones 👀📚</strong></p>
+
+        <div class="container rounded bg-light" style="width: 600px; margin-top: 30px; padding: 20px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+            <input type="text" id="name" placeholder="First Name" class="form-control">
+
+            <input type="text" id="section" placeholder="Grade & Section (ex. 10-Diamond)" class="form-control" style="margin-top: 8px;">
+
+            <input type="text" id="subject" placeholder="Favorite Subject" class="form-control" style="margin-top: 8px;">
+
+        
+            <div style="margin-top: 16px; margin-left: 160px;">
+                <button type="button" class="btn btn-outline-success" py-click="addClassmate">Add Classmate</button>
+                <button type="button" class="btn btn-outline-primary" py-click="showList">Show List</button>
+            </div>
+
+            <div class="container" style="margin-top: 10px;"><p style="text-align: center; font-size: 10px;">Note: To view added classmate, reset the list by reclicking "Show List"</p></div>
+        </div>
+
+        <div class="container rounded" style="text-align: center; width: 600px; margin-top: 10px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; background-color: rgb(145, 197, 255);"> 
+            <ul id="classmate-list" style="list-style: none; padding: 10px;"></ul>
+        </div>
+
+        <div>
+             <p style="font-size: 13px;" id="notif"></p>
+        </div>
+
+    </div>
+
+    <script type="py" src="main.py"></script>
+    
+</body>
+</html>
